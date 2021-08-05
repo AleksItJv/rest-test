@@ -1,4 +1,4 @@
-package com.app.interfaces;
+package com.app.services.interfaces;
 
 import com.app.entities.WeatherDbEntity;
 

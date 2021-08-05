@@ -1,7 +1,7 @@
 package com.app.controllers;
 
 
-import com.app.interfaces.WeatherServiceInterface;
+import com.app.services.interfaces.WeatherServiceInterface;
 
 import com.app.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;

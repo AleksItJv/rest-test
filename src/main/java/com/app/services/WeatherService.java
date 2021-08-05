@@ -1,6 +1,6 @@
 package com.app.services;
 
-import com.app.interfaces.WeatherServiceInterface;
+import com.app.services.interfaces.WeatherServiceInterface;
 import com.app.repositories.WeatherRepository;
 import com.app.entities.WeatherDbEntity;
 import com.app.entities.WeatherEnt;
