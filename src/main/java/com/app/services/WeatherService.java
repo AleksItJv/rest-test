@@ -1,7 +1,7 @@
-package com.app.dao.services;
+package com.app.services;
 
-import com.app.dao.interfaces.WeatherDbEntityDAO;
-import com.app.dao.repositories.WeatherDbEntityRepository;
+import com.app.interfaces.WeatherServiceInterface;
+import com.app.repositories.WeatherRepository;
 import com.app.entities.WeatherDbEntity;
 import com.app.entities.WeatherEnt;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,9 +15,9 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Service
-public class WeatherDbEntityService implements WeatherDbEntityDAO {
+public class WeatherService implements WeatherServiceInterface {
 
-    private WeatherDbEntityRepository weatherDbEntityRepository;
+    private WeatherRepository weatherRepository;
 
     @Override
     public WeatherDbEntity addWeather(String city) throws IOException {
@@ -35,12 +35,12 @@ public class WeatherDbEntityService implements WeatherDbEntityDAO {
                 weatherEnt.getWeather().get(0).getDescription(),
                 weatherEnt.getWeather().get(0).getIcon());
 
-        weatherDbEntityRepository.save(weatherDbEntity);
+        weatherRepository.save(weatherDbEntity);
         return weatherDbEntity;
     }
 
     @Autowired
-    public void setWeatherDbEntityRepository(WeatherDbEntityRepository weatherDbEntityRepository) {
-        this.weatherDbEntityRepository = weatherDbEntityRepository;
+    public void setWeatherRepository(WeatherRepository weatherRepository) {
+        this.weatherRepository = weatherRepository;
     }
 }

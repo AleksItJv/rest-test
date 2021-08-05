@@ -1,4 +1,4 @@
-package com.app.dao.repositories;
+package com.app.repositories;
 
 import com.app.entities.WeatherDbEntity;
 import org.springframework.data.repository.CrudRepository;
@@ -7,5 +7,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface WeatherDbEntityRepository extends CrudRepository<WeatherDbEntity, Long> {
+public interface WeatherRepository extends CrudRepository<WeatherDbEntity, Long> {
 }
